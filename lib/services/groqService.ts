@@ -2,7 +2,7 @@ import Groq from "groq-sdk";
 import { type Palette } from '../types';
 
 // Securely load Groq API key from environment (.env)
-const groqApiKey = "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";
+const groqApiKey = process.env.GROQ_API_KEY || "";
 
 if (!groqApiKey) {
     console.error("Groq API key is missing. Please set GROQ_API_KEY in your .env file.");
